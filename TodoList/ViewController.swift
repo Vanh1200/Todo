@@ -60,7 +60,7 @@ extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = storyboard?.instantiateInitialViewController()(withIdentifier: "task") as! TaskViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "task") as! TaskViewController
         vc.title = "Detail Task"
         vc.task = tasks[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
