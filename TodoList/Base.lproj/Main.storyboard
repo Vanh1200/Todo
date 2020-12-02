@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hEx-LO-3J3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -69,13 +70,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="MDf-Ff-Pf7"/>
                                 </constraints>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Guy-dc-MP6"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xYA-N8-cxv" firstAttribute="top" secondItem="Guy-dc-MP6" secondAttribute="top" constant="20" id="Dhp-rp-fMW"/>
                             <constraint firstItem="xYA-N8-cxv" firstAttribute="leading" secondItem="Guy-dc-MP6" secondAttribute="leading" constant="20" id="VSa-Kb-LdW"/>
@@ -97,9 +98,26 @@
                     <view key="view" contentMode="scaleToFill" id="CNG-br-496">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT6-Zr-IaW">
+                                <rect key="frame" x="12" y="56" width="390" height="794"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qB4-ED-H1R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qB4-ED-H1R" firstAttribute="bottom" secondItem="AT6-Zr-IaW" secondAttribute="bottom" constant="12" id="PyL-c7-J5O"/>
+                            <constraint firstItem="AT6-Zr-IaW" firstAttribute="leading" secondItem="qB4-ED-H1R" secondAttribute="leading" constant="12" id="Rhf-Ua-Ud9"/>
+                            <constraint firstItem="qB4-ED-H1R" firstAttribute="trailing" secondItem="AT6-Zr-IaW" secondAttribute="trailing" constant="12" id="cQ6-vo-nwR"/>
+                            <constraint firstItem="AT6-Zr-IaW" firstAttribute="top" secondItem="qB4-ED-H1R" secondAttribute="top" constant="12" id="jhw-ZT-jHv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="AT6-Zr-IaW" id="HYe-cS-oPM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyk-dF-DcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,9 +145,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
